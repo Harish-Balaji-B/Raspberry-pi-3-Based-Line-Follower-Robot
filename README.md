@@ -18,7 +18,15 @@ The Line Follower Robot using Raspberry Pi 3 and L298N motor is a project aimed 
 * Chaises (robot body)
 
 ### Working Principle
+* Line Follower Robot is able to track a line with the help of an IR sensor. This sensor has a IR Transmitter and IR receiver.
+* The IR transmitter (IR LED) transmits the light and the Receiver (Photodiode) waits for the transmitted light to return back.
+* An IR light will return back only if it is reflect by a surface. Whereas, all surfaces do not reflect an IR light, only white the colour surface can completely reflect them and black colour surface will completely absorb them.
+* These two IR sensors will be placed one on either side of the line. If none of the sensors are detecting a black line them they PI instructs the motors to move forward.
+* If left sensor comes on black line then the PI instructs the robot to turn left by rotating the right wheel alone.
+* If right sensor comes on black line then the PI instructs the robot to turn right by rotating the left wheel alone.
+* If both sensors comes on black line, robot stops as shown in the next slide.
 
+![lmao](https://github.com/Harish-Balaji-B/Raspberry-pi-3-Based-Line-Follower-Robot/blob/main/demo/exp.png)<br>
 
 
 ### Example Results
